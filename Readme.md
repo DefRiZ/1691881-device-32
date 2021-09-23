@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Андрей Вакуленко](https://up.htmlacademy.ru/htmlcss/32/user/1691881).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Устинов](https://htmlacademy.ru/profile/ustinov-dmitriy).
 
 ---
 
