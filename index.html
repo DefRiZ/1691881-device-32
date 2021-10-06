@@ -2,20 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
     <header class="page-header">
       <header class="page-header">
       <a class="navigation-logo" href="index.html">
-        <img class="page-header-logo" alt="Логотип интернет-магазина «Девайс»" src="">
+        <img class="page-header-logo" src="img/main-logo.svg" alt="Логотип интернет-магазина «Девайс»" width="145" height="36">
       </a>
       <label class="visually-hidden">Поиск
         <input class="search" type="search" name="search" id="search" placeholder="Поиск по сайту">
       </label>
       <nav class="main-nav">
         <a class="button catalog-button" href="catalog.html">Каталог товаров</a>
-        <button class="button visually-hidden">Слайдер меню</button>
+        <button class="button-menu visually-hidden">Слайдер меню</button>
       </nav>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
@@ -42,11 +43,11 @@
     </header>
     </header>
     <main class="main-index">
-      <h1>Интернет магазин "Device"</h1>
+      <h1 class="visually-hidden">Интернет магазин "Device"</h1>
       <section class="slider-describe">
         <h2 class="visually-hidden">Промо-слайдер</h2>
         <div class="gallery">
-            <img class="slider-image" src="" alt="Первый слайд">
+            <img class="slider-image" src="img/slider-1.png" alt="Первый слайд" width="560" height="560">
             <button class="slider-button slider-prev" type="button">
               <span class="visually-hidden">Предыдущий слайд</span>
             </button>
@@ -73,7 +74,7 @@
             <h3 class="describe-title">Порхает как бабочка, жалит как пчела!</h3>
             <p class="describe-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
             <span class="describe-number">01</span>
-            <a class="button button-more">Подробнее</a>
+            <a class="button button-more" href="#">Подробнее</a>
             <table class="information">
               <tr>
                 <td class="information-title">800 м</td>
@@ -92,23 +93,29 @@
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="products-list">
           <li class="products-item">
-            <a class="products-description" href="#">Виртуальная реальность</a>
+            <img class="product-picture" src="img/product-1.svg" alt="VR" width="97" height="55">
           </li>
+          <a class="products-description" href="#">Виртуальная реальность</a>
           <li class="products-item">
-            <a class="products-description" href="#">Моноподы для селфи</a>
+            <img class="product-picture" src="img/product-2.svg" alt="Моноподы" width="86" height="117">
           </li>
+          <a class="products-description" href="#">Моноподы для селфи</a>
           <li class="products-item">
-            <a class="products-description" href="#">Экшн-камеры</a>
+            <img class="product-picture" src="img/product-3.svg" alt="Камеры" width="71" height="87">
           </li>
+          <a class="products-description" href="#">Экшн-камеры</a>
           <li class="products-item">
-            <a class="products-description" href="#">Фитнес-браслеты</a>
+            <img class="product-picture" src="img/product-4.svg" alt="Браслеты" width="107" height="65">
           </li>
+          <a class="products-description" href="#">Фитнес-браслеты</a>
           <li class="products-item">
-            <a class="products-description" href="#">Умные часы</a>
+            <img class="product-picture" src="img/product-5.svg" alt="Часы" width="56" height="98">
           </li>
+          <a class="products-description" href="#">Умные часы</a>
           <li class="products-item">
-            <a class="products-description" href="#">Квадрокоптеры</a>
+            <img class="product-picture" src="img/product-6.svg" alt="Квадрокоптеры" width="132" height="69">
           </li>
+          <a class="products-description" href="#">Квадрокоптеры</a>
         </ul>
       </section>
       <section class="advantages">
@@ -127,6 +134,7 @@
           </ul>
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          <img src="img/delivery.svg">
         </div>
           <span class="advantages-text">Доставим редкий товар под заказ</span>
       </section>
@@ -168,15 +176,18 @@
       </section>
     </main>
     <footer class="page-footer">
+      <a class="footer-logo" href="index.html">
+        <img class="footer-logo" src="img/footer-logo.svg" alt="Логотип интернет-магазина «Девайс»" width="145" height="36">
+      </a>
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
-            <address class="footer-contacts-address">
+          <address class="footer-contacts-address">
             <p class="footer-contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
             <a class="footer-contacts-phone" href="tel:78128121212">+7 (812) 812-12-12</a>
           </address>
-        </section>
-        <nav class="footer-nav">
-            <ul class="footer-navigation-list">
+      </section>
+      <div class="footer-nav">
+        <ul class="footer-navigation-list">
           <li class="footer-navigation-item">
             <a class="footer-navigation-link" href="#">Доставка</a>
           </li>
@@ -186,29 +197,33 @@
           <li class="footer-navigation-item">
             <a class="footer-navigation-link" href="#">Контакты</a>
           </li>
-          </ul>
-        </nav>
-        <section class="footer-social">
-          <h2 class="visually-hidden">Соц. сети</h2>
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
-              <a class="link" href="#">
-                <span class="visually-hidden">Фейсбук</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="link" href="#">
-                <span class="visually-hidden">Инстаграм</span>
-              </a>
-            </li>
-            <li class="footer-social-item">
-              <a class="link" href="#">
-                <span class="visually-hidden">Твиттер</span>
-              </a>
-            </li>
-          </ul>
-          <a class="htmlacademy-link visually-hidden" href="https://htmlacademy.ru/">.html academy</a></p>
-        </section>
+        </ul>
+      </div>
+      <section class="footer-social">
+        <h2 class="visually-hidden">Соц. сети</h2>
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a class="link" href="#">
+              <img src="img/facebook-logo.svg" alt="Логотип фейсбука" width="9" height="18">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="link" href="#">
+              <img src="img/inst-logo.svg" alt="Логотип инстаграмма" width="16" height="16">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="link" href="#">
+              <img src="img/twit-logo.svg" alt="Логотип твиттера" width="15" height="14">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+        </ul>
+        <img src="img/html-logo.svg" alt="Логитип академии" width="115" height="34">
+        <a class="htmlacademy-link visually-hidden" href="https://htmlacademy.ru/">.html academy</a></p>
+      </section>
     </footer>
   </body>
 </html>
