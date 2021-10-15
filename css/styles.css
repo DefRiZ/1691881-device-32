@@ -384,8 +384,32 @@ figcaption{
   color: inherit;
 }
 
+/* Catalog */
 option{
   color:#000;
+}
+
+.page-container{
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.catalog{
+  display: flex;
+
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
+}
+
+.catalog-products{
+  width: 200px;
+  margin-right: 68px;
+}
+
+.catalog-right-column{
+  width: 972px;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
 }
 
 .inner-header-title{
