@@ -7,38 +7,38 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="navigation-logo" href="index.html">
+      <a class="navigation-logo visually-hidden" href="index.html">
         <img class="page-header-logo" src="img/main-logo.svg" alt="Логотип интернет-магазина «Девайс»" width="145" height="36">
       </a>
       <ul class="navigation-list navigation-user">
         <li class="navigation-item">
-          <label class="visually-hidden">Поиск
-            <input class="search" type="search" name="search" id="search" placeholder="Поиск по сайту">
+          <label class="search">
+            <input class="search navigation-link" type="search" name="search" id="search" placeholder="Поиск по сайту">
           </label>
         </li>
         <li class="navigation-item">
-          <button class="button navigation-button">Войти</button>
+          <button class="button navigation-button navigation-link">Войти</button>
         </li>
         <li class="navigation-item">
-          <button class="button navigation-button">Сравнить</button>
+          <button class="button navigation-button navigation-link">Сравнить</button>
         </li>
         <li class="navigation-item">
-          <button class="button navigation-button">Корзина</button>
+          <button class="button navigation-button navigation-link">Корзина</button>
         </li>
       </ul>
       <ul class="navigation-list navigation-site">
         <li class="navigation-item main-nav">
-          <a class="button catalog-button" href="catalog.html">Каталог товаров</a>
+          <a class="button catalog-button navigation-link" href="catalog.html">Каталог товаров</a>
           <button class="button-menu visually-hidden">Слайдер меню</button>
         </li>
         <li class="navigation-item">
-          <a class="button user-navigation-button" href="#">Доставка</a>
+          <a class="button user-navigation-button navigation-link" href="#">Доставка</a>
         </li>
         <li class="navigation-item">
-          <a class="button user-navigation-button" href="#">Гарантия</a>
+          <a class="button user-navigation-button navigation-link" href="#">Гарантия</a>
         </li>
         <li class="navigation-item">
-          <a class="button user-navigation-button" href="#">Контакты</a>
+          <a class="button user-navigation-button navigation-link" href="#">Контакты</a>
         </li>
       </ul>
     </header>
@@ -48,7 +48,7 @@
         <h2 class="visually-hidden">Промо-слайдер</h2>
         <div class="slide-1">
           <div class="slider-picture">
-            <img class="slider-image" src="img/slider-1.png" alt="Первый слайд" width="560" height="560">
+            <img class="slider-image" src="img/slider-1.png" alt="Первый слайд" width="560" height="button-more">
             <button class="slider-button slider-prev" type="button">
               <span class="visually-hidden">Предыдущий слайд</span>
             </button>
@@ -174,15 +174,17 @@
           </ul>
           <h3 class="delivery-title">Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-          <img src="img/delivery.svg">
+          <img class="delivery-picture" src="img/delivery.svg">
         </div>
-          <span class="advantages-text">Доставим редкий товар под заказ</span>
       </section>
+      <div class="rare-product">
+          <span class="rare-product-text">Доставим редкий товар под заказ</span>
+      </div>
       <div class="index-columns">
         <section class="about-us">
           <h2 class="about-title">О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-            <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
+          <p>Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
             <ul class="transport-companies">
               <li class="company company-1">Меловые линии</li>
               <li class="company company-2">СДИК</li>
@@ -221,17 +223,12 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer-container">
-      <a class="footer-logo" href="index.html">
+      <a class="footer-logo visually-hidden" href="index.html">
         <img class="footer-logo" src="img/footer-logo.svg" alt="Логотип интернет-магазина «Девайс»" width="145" height="36">
       </a>
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
-          <address class="footer-contacts-address">
-            <p class="footer-contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-            <a class="footer-contacts-phone" href="tel:78128121212">+7 (812) 812-12-12</a>
-          </address>
-      </section>
-      <div class="footer-nav">
+          <p class="footer-contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         <ul class="footer-navigation-list">
           <li class="footer-navigation-item">
             <a class="footer-navigation-link" href="#">Доставка</a>
@@ -243,8 +240,9 @@
             <a class="footer-navigation-link" href="#">Контакты</a>
           </li>
         </ul>
-      </div>
-      <section class="footer-social">
+        <a class="footer-contacts-phone" href="tel:78128121212">Тел.: +7 (812) 812-12-12</a>
+      </section>
+      <section class="footer-solial-links">
         <h2 class="visually-hidden">Соц. сети</h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
@@ -266,7 +264,7 @@
             </a>
           </li>
         </ul>
-        <img src="img/html-logo.svg" alt="Логитип академии" width="115" height="34">
+        <img class="html-logo" src="img/html-logo.svg" alt="Логитип академии" width="115" height="34">
         <a class="htmlacademy-link visually-hidden" href="https://htmlacademy.ru/">.html academy</a></p>
       </section>
       </div>

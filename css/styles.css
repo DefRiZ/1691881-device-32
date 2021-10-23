@@ -70,6 +70,17 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* отображаем курсор в виде руки при наведении; некоторые
+  считают, что необходимо оставлять стрелочный вид для кнопок */
+  cursor: pointer;
+}
+
 html{
  background-color: #FFFFFF;
 }
@@ -101,8 +112,15 @@ address{
 }
 
 
-.visually-hidden{
-  display: none;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
@@ -129,35 +147,71 @@ address{
   background-color: #FFE17F;
   color: #000;
   width: 1160px;
-  display: flex;
-  margin: 0 auto;
+  margin: 40px auto 0 auto;
+}
+
+.navigation-logo{
+  position: absolute;
 }
 
 .navigation-list{
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+  display: flex;
+  margin: 0 auto;
+  width: 1075px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .navigation-user{
-  width: 1075px;
+  margin: 48px 25px 44px 60px;
 }
 
 .navigation-site{
-  width: 1041px;
+  margin: 29px 59px 167px 60px;
+}
+
+.navigation-link{
+  display: block;
+  outline: 5px solid green;
+  outline-offset: -5px;
+}
+
+.navigation-item button{
+  width: 100px;
+  height: 20px;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 245px;
+}
+
+.navigation-user li:nth-of-type(2){
+  width: 220px;
+  height: 20px;
+}
+
+.navigation-site li:nth-of-type(2){
+  margin: auto 19px auto 304px;
+}
+
+.navigation-site li:nth-of-type(3){
+  margin-right: 62px;
 }
 
 .search{
   line-height: 19px;
   color: #000;
   opacity: 0.3;
+  width: 480px;
+  height: 20px;
 }
 
 /* Слайдер */
-
-.slider{
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
-}
 
 .slide-1{
   display: flex;
@@ -165,6 +219,10 @@ address{
   justify-content: space-between;
   width: 1160px;
   margin: 0 auto;
+}
+
+.slider-pagination{
+  list-style: none;
 }
 
 .slider-picture,
@@ -180,6 +238,20 @@ address{
   font-size: 50px;
   line-height: 50px;
   color: #000;
+  margin-bottom: 19px;
+}
+
+.describe-text{
+  margin-bottom: 30px;
+}
+
+.information-title{
+  font-size: 36px;
+  color: #000;
+  display: inline-block;
+  width: 160px;
+  height: 52px;
+  margin-top: 70px;
 }
 
 /*.describe-number{
@@ -189,14 +261,19 @@ address{
   line-height: 30px;
 }
 */
-
-.information-title{
-  font-size: 36px;
-  color: #000;
-}
-
 .information-subtitle{
   font-size: 16px;
+  display: inline-block;
+  width: 140px;
+  height: 30px;
+}
+
+.information-subtitle:nth-of-type(2){
+  font-size: 16px;
+  display: inline-block;
+  width: 160px;
+  height: 30px;
+  margin-left: 20px;
 }
 
 /* Товары */
@@ -218,6 +295,7 @@ figure div{
 figcaption{
   display: inline-block;
   width: 160px;
+  margin-top: 33px;
 }
 
 .products-list{
@@ -225,6 +303,7 @@ figcaption{
   justify-content: space-between;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+  margin: 0 0 149px 0;
 }
 
 .products-description{
@@ -245,34 +324,53 @@ figcaption{
 
 .advantages-slider{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  height: 288px;
   width: 1094px;
-  height: 249px;
   margin: 0 auto;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
 }
 
 .delivery-title{
-  width: 560px;
-  margin: 0 0 0 240px;
   font-family: Raleway;
   font-size: 50px;
   line-height: 50px;
+  height: auto;
   color: #000000;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline: 5px solid green;
   outline-offset: -5px;
+  display: block;
+  width: 560px;
+  height: 70px;
+
 }
 
 .advantages-slider p{
   width: 497px;
-  margin: 0 0 0 240px;
+  height: 167px;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
 }
 
-.advantages-text{
+.advantages-list li:first-of-type{
+  margin: 9px 240px 45px 0;
+}
+
+.advantages-list li:nth-of-type(2){
+  margin: 0 240px 45px 0;
+}
+
+.advantages-list li:last-of-type{
+  margin: 0 240px 150px 0;
+}
+
+.delivery-picture{
+  position: absolute;
+}
+
+.rare-product-text{
   font-family: Raleway;
   font-weight: 800;
   font-size: 20px;
@@ -280,14 +378,18 @@ figcaption{
   text-align: center;
   letter-spacing: 0.2em
   text-transform: uppercase;
-  display: block;
-  width: 1160px;
-  margin: 0 auto;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+  width: 1160px;
+  height: 100px;
+  margin: 90px auto 146px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F0F0;
 }
 
-.advantages-text::before{
+.rare-product-text::before{
   content: url(../img/delivery-bus.svg);
 }
 
@@ -297,7 +399,7 @@ figcaption{
   display: flex;
   justify-content: space-between;
   width: 1160px;
-  margin: 0 auto;
+  margin: 0 auto 87px auto;
 }
 
 .about-us,
@@ -305,6 +407,33 @@ figcaption{
   width: 560px;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
+}
+
+.about-title,
+.contacts-title{
+  margin: 49px 0 26px 0;
+}
+
+.about-us p{
+  height: 101px;
+  margin: 0 0 23px 0;
+}
+
+.about-us p:first-of-type{
+  height: 101px;
+  margin: 0;
+}
+
+.transport-companies li{
+  margin: 0 0 30px 26px;
+}
+
+.transport-companies{
+  margin: 0 0 52px 0;
+}
+
+.button-about a{
+  margin: 0 0 87px 0;
 }
 
 .company{
@@ -316,6 +445,11 @@ figcaption{
 .contacts-subtitle{
   font-weight: 700;
   font-size: 24px;
+  margin: 30px 0 15px 0;
+}
+
+.contacts-schedule{
+  margin: 0 0 67px 0;
 }
 
 .contacts-phone{
@@ -338,20 +472,39 @@ figcaption{
 
 .subscribe-title,
 .email,
-.subscribe p{
-  width: 550px;
+.subscribe-wrapper p{
+  width: 560px;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
 }
 
-.email{
-  color: #444444;
-  opacity: 0.5;
+.subscribe-wrapper p{
+  height: 99px;
+  margin: 86px 0 0 0;
 }
 
-.subscribe-text{
-  background: url(../img/Free.svg) no-repeat;
+.subscribe-title{
+  height: 120px;
+  margin: 75px 0 53px 0;
 }
+
+.email{
+  width: 560px;
+  height: 30px;
+  color: #444444;
+  opacity: 0.5;
+  margin: 0 0 149px 0;
+}
+
+.subscribe-button{
+  margin: 0 0 149px 40px;
+}
+
+.subscribe-text::before{
+  content: url(../img/Free.svg);
+  margin-right: 21px;
+}
+
 
 /* Футер */
 
@@ -362,16 +515,42 @@ figcaption{
 
 .page-footer-container{
   display: flex;
+  flex-direction: column;
   width: 1160px;
   margin: 0 auto;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
 }
 
-.footer-contacts-address a,
-.footer-contacts-address p{
+.footer-contacts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1160px;
+  margin: 137px auto 0 auto;
+  outline: 5px solid green;
+  outline-offset: -5px;
+  width: 1160px;
+}
+
+.footer-navigation-list{
+  display: flex;
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+  order: 0;
+}
+
+.footer-contacts-phone,
+.footer-contacts-address-text {
   font-family: Rubik;
   font-size: 16px;
   line-height: 19px;
   color: inherit;
+}
+
+.footer-contacts-address-text{
+  width: 240px;
+  height: auto;
 }
 
 .footer-navigation-link{
@@ -382,6 +561,27 @@ figcaption{
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: inherit;
+  margin-right: 7px;
+}
+
+.footer-solial-links{
+  display: flex;
+  margin: 65px 0 65px auto;
+}
+
+.footer-social-list{
+  display: flex;
+}
+
+.footer-social-item{
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
+  width: 40px;
+  height: 40px;
+}
+
+.footer-social-item:last-of-type{
+  margin-right: 392px;
 }
 
 /* Catalog */
@@ -390,14 +590,43 @@ option{
 }
 
 .page-container{
+  display: flex;
+  flex-direction: column;
   width: 1160px;
   margin: 0 auto;
+  outline: 5px solid black;
+  outline-offset: -5px;
+}
+
+.inner-header-title{
+  font-family: Raleway;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 14px;
+  margin-left: 60px;
+}
+
+.breadcrumbs{
+  display: flex;
+  outline: 5px solid yellow;
+  outline-offset: -5px;
+  margin-bottom: 49px;
+  margin-left: 60px;
+}
+
+.breadcrumbs-link{
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  opacity: 0.6;
+  margin-right: 36px;
 }
 
 .catalog{
   display: flex;
-
-  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline: 5px solid yellow;
   outline-offset: -5px;
 }
 
@@ -408,27 +637,16 @@ option{
 
 .catalog-right-column{
   width: 972px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
-}
-
-.inner-header-title{
-  font-family: Raleway;
-  font-size: 50px;
-  line-height: 50px;
-  font-weight: 800;
-  color: #000;
-}
-
-.breadcrumbs-link{
-  font-size: 16px;
-  line-height: 19px;
-  color: #000;
-  opacity: 0.6;
 }
 
 .catalog-products{
   background-color: #EBEBEB;
+}
+
+.catalog-products{
+  width: 468px;
+  height: auto;
+  margin-right: 0;
 }
 
 .catalog-products-title{
@@ -440,6 +658,7 @@ option{
   text-transform: uppercase;
   background-color: #DCDCDC;
   color: #000;
+  padding: 25px 32px 25px 60px;
 }
 
 .catalog-filter-title{
@@ -448,12 +667,20 @@ option{
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #000;
+  padding: 108px 68px 0 60px;
 }
-
 .control-text{
   font-size: 16px;
   line-height: 19px;
   color: #000;
+  padding: 14px 171px 0 60px;
+}
+
+.button-show{
+  display: inline-block;
+  width: 200px;
+  height: 20px;
+  margin: 52px 68px 646px 60px;
 }
 
 .sorting-menu,
@@ -463,12 +690,43 @@ option{
   line-height: 19px;
 }
 
+.sorting-menu{
+  display: flex;
+  padding: 25px 0 25px 72px;
+  background-color: #EBEBEB;
+}
+
+.popular{
+
+}
+
+.sorting-type{
+  margin-right: auto;
+}
+
 .sorting-menu-text{
   font-family: Raleway;
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000;
+}
+
+.btn-prev{
+  margin-right: 19px;
+}
+
+.btn-prev,
+.btn-next{
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  outline: 5px solid rgba(255, 99, 78, 0.5);
+  outline-offset: -5px;
+}
+
+.product-card-menu{
+  margin-left: 72px;
 }
 
 .product-card-title{
@@ -483,8 +741,38 @@ option{
   text-align: right;
 }
 
+.button-more-cards{
+  width: 760px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 3px solid #000000;
+}
+
+.pagination{
+  margin: 51px 0 77px 72px;
+  height: 70px;
+}
+
+.pagination-list{
+  display: flex;
+  justify-content: space-around;
+}
+
 .pagination-link-number{
+  display: flex;
+  padding-top: 27px;
   text-align: center;
   color: inherit;
   opacity: 0.3;
+}
+
+.pagination-prev,
+.pagination-next{
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 70px;
 }
