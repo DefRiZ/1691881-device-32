@@ -328,6 +328,7 @@ figcaption{
   flex-wrap: wrap;
   height: 288px;
   width: 1094px;
+  width: 1440px;
   margin: 0 auto;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
@@ -355,19 +356,30 @@ figcaption{
 }
 
 .advantages-list li:first-of-type{
-  margin: 9px 240px 45px 0;
+  margin: 9px 0 45px 140px;
 }
 
 .advantages-list li:nth-of-type(2){
-  margin: 0 240px 45px 0;
+  margin: 0 0 45px 140px;
 }
 
 .advantages-list li:last-of-type{
-  margin: 0 240px 150px 0;
+  margin: 0 0 150px 140px;
 }
 
 .delivery-picture{
   position: absolute;
+}
+
+.rare-product{
+  display: grid;
+  grid-template-columns: 125px 1035px;
+  grid-template-rows: 100px;
+  outline: 5px solid orange;
+  outline-offset: -5px;
+  margin: 90px auto 146px auto;
+  width: 1160px;
+  height: 100px;
 }
 
 .rare-product-text{
@@ -378,19 +390,18 @@ figcaption{
   text-align: center;
   letter-spacing: 0.2em
   text-transform: uppercase;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
-  width: 1160px;
-  height: 100px;
-  margin: 90px auto 146px auto;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #F0F0F0;
 }
 
-.rare-product-text::before{
+.rare-product::before{
   content: url(../img/delivery-bus.svg);
+  background-color: #FFE17F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* О нас и Контакты */
@@ -505,7 +516,6 @@ figcaption{
   margin-right: 21px;
 }
 
-
 /* Футер */
 
 .page-footer{
@@ -608,6 +618,8 @@ option{
   margin-left: 60px;
 }
 
+/* Хлебные крошки */
+
 .breadcrumbs{
   display: flex;
   outline: 5px solid yellow;
@@ -623,6 +635,8 @@ option{
   opacity: 0.6;
   margin-right: 36px;
 }
+
+/* Левое меню каталога */
 
 .catalog{
   display: flex;
@@ -673,7 +687,9 @@ option{
   font-size: 16px;
   line-height: 19px;
   color: #000;
-  padding: 14px 171px 0 60px;
+  display: inline-block;
+  padding-left: 60px;
+  margin-top: 21px;
 }
 
 .button-show{
@@ -682,6 +698,8 @@ option{
   height: 20px;
   margin: 52px 68px 646px 60px;
 }
+
+/* правое меню сортировки */
 
 .sorting-menu,
 .pagination{
@@ -694,10 +712,6 @@ option{
   display: flex;
   padding: 25px 0 25px 72px;
   background-color: #EBEBEB;
-}
-
-.popular{
-
 }
 
 .sorting-type{
@@ -725,8 +739,18 @@ option{
   outline-offset: -5px;
 }
 
+/* Каталог товаров */
+
 .product-card-menu{
+  margin-top: 69px;
   margin-left: 72px;
+}
+
+.product-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
 }
 
 .product-card-title{
@@ -734,11 +758,19 @@ option{
   line-height: 24px;
   letter-spacing: -0.02em;
   color: #000;
+  width: 280px;
+  height: 50px;
 }
 
 .product-card-price{
   line-height: 21px;
   text-align: right;
+}
+
+.product-card-link-2{
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .button-more-cards{
@@ -747,9 +779,11 @@ option{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 44px auto 0 auto;
   border: 3px solid #000000;
 }
+
+/* Нижняя пагинация */
 
 .pagination{
   margin: 51px 0 77px 72px;
