@@ -198,6 +198,12 @@ address{
 }
 
 .navigation-logo{
+background-image: linear-gradient(180deg,#fff 20px,#f7e296 20px);
+margin-top: -20px;
+margin-left: 61px;
+}
+
+.navigation-logo{
   position: absolute;
 }
 
