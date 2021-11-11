@@ -135,10 +135,15 @@ address{
   color: inherit;
 }
 
+.button-show{
+  margin: 52px 68px 646px 60px;
+}
+
 .button-more,
 .advantages-button,
 .button-about,
-.button-feedback{
+.button-feedback,
+.button-show{
   background-image: url(../img/button.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -152,14 +157,16 @@ address{
 .button-more:hover,
 .advantages-button:hover,
 .button-about:hover,
-.button-feedback:hover{
+.button-feedback:hover,
+.button-show:hover{
   background: #FFE17F;
 }
 
 .button-more:focus,
 .advantages-button:focus,
 .button-about:focus,
-.button-feedback:focus{
+.button-feedback:focus,
+.button-show:focus{
   background-image: url(../img/focus-button.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;;
@@ -176,6 +183,11 @@ address{
   background-image: none;
   padding-left: 18px;
   background-color: black;
+}
+
+.button-show:active{
+  opacity: 0.3;
+  border: none;
 }
 
 .navigation-button{
@@ -1235,15 +1247,58 @@ option{
   line-height: 19px;
   color: #000;
   display: inline-block;
-  padding-left: 60px;
+  padding-left: 97px;
   margin-top: 21px;
 }
 
-.button-show{
-  display: inline-block;
-  width: 200px;
+.control{
+  position: relative;
+  display: block;
+}
+
+.control-mark{
+  position: absolute;
+  top: 22px;
+  left: 60px;
+  width: 20px;
   height: 20px;
-  margin: 52px 68px 646px 60px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+}
+
+.control:focus .control-mark{
+  border-color: #AF4FFF;
+}
+
+.control:hover .control-mark{
+  opacity: 0.5;
+}
+
+.control:active .control-mark{
+  opacity: 0.2;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark:before{
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -8px;
+  left: 4px;
+  content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10 0L3.1 6.6L0 3.6V6.9L3.2 10L10 3.3V0Z' fill='black'/%3e%3c/svg%3e");
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #242424;
+  border-radius: 50%;
+  content: "";
 }
 
 /* правое меню сортировки */
@@ -1271,6 +1326,25 @@ option{
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 190px;
+
+}
+
+.select-control {
+  width: 100%;
+  background-color: #FFFFFF;
+  border: none;
+  background-color: #EBEBEB;
+  background-image: url(../img/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 178px center;;
+  appearance: none;
 }
 
 .btn-prev{
